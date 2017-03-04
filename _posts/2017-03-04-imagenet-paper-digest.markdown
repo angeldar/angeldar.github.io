@@ -3,7 +3,7 @@ layout:     post
 title:      "Заметки о статьях по DeepLearning и ImageNet"
 date:       2017-03-04 00:00:00 +0200
 author:     "Vasiliy Zemlyanov"
-header-img: "img/post-bg-12.jpg"
+header-img: "img/post-bg-10.jpg"
 ---
 
 Краткая заметка о содержании классических статей по сверточным нейронным сетям и *ImageNet*.
