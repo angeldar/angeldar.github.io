@@ -26,7 +26,7 @@ Advances in neural information processing systems. 2012. [[pdf](http://papers.ni
 Авторы использовали сверточную сеть из $$8$$ слоев: $$5$$ сверточных, $$3$$ полносвязных. Последний слой — [softmax](https://en.wikipedia.org/wiki/Softmax_function) на $$1000$$ классов.
 
 <p class="center">
-    <img src="/assets/imageNet/alexNet.png" alt="AlexNet network" class='center-block'>
+    <img src="/assets/imagenet/alexNet.png" alt="AlexNet network" class='center-block'>
 </p>
 
  <center>  Оригинальная схема из статьи. <br/> (Да, она неправильно обрезана в статье.)
@@ -125,7 +125,7 @@ Proceedings of the IEEE Conference on Computer Vision and Pattern Recognition. 2
 *Inception* слой одновременно применяет к предыдущему слою $$1$$x$$1$$, $$3$$x$$3$$ и $$5$$x$$5$$ свертки, $$3$$x$$3$$ пулинг и комбинирует результаты. Это проще один раз [увидеть](https://www.youtube.com/watch?v=VxhSouuSZDY). Для уменьшения вычислительной сложности дополнительно используются $$1$$x$$1$$ свертки.
 
 <p class="center">
-    <img src="/assets/imageNet/inceptionLayer.png" alt="Inception layer" class='center-block'>
+    <img src="/assets/imagenet/inceptionLayer.png" alt="Inception layer" class='center-block'>
 </p>
 <center>Схема <i>Inception</i> слоя.</center>
 
@@ -133,7 +133,7 @@ Proceedings of the IEEE Conference on Computer Vision and Pattern Recognition. 2
 *GoogleLeNet* является конкретной реализацией *Inception* архитектуры, использованной в соревновании *ILSVRC* $$2014$$. Сеть содержит $$22$$ слоя ($$27$$ если считать пулинг слои). На самом деле простых независимых слоев около $$100$$.
 
 <p class="center">
-    <img src="/assets/imageNet/googleLeNet.png" alt="GoogleLeNet" class='center-block'>
+    <img src="/assets/imagenet/googleLeNet.png" alt="GoogleLeNet" class='center-block'>
 </p>
 <center>Схема <i>GoogleLeNet</i>.</center>
 
