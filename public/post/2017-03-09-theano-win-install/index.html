@@ -1,0 +1,277 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  
+    <title>Ставим Theano на Windows :: Re9ulus Blog — A simple, retro theme for Hugo</title>
+  
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+<meta name="description" content="Theano — популярная библиотека для работы с нейронными сетями. И как многие полезные Machine Learning инструменты, на Windows она просто так не ставится.
+"/>
+<meta name="keywords" content=""/>
+<meta name="robots" content="noodp"/>
+<link rel="canonical" href="re9ulus.github.io/post/2017-03-09-theano-win-install/" />
+
+
+<link rel="stylesheet" href="re9ulus.github.io/assets/style.css">
+
+  <link rel="stylesheet" href="re9ulus.github.io/assets/green.css">
+
+
+
+
+
+
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="re9ulus.github.io/img/apple-touch-icon-144-precomposed.png">
+
+<link rel="shortcut icon" href="re9ulus.github.io/img/favicon/green.png">
+
+
+
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="Ставим Theano на Windows :: Re9ulus Blog — A simple, retro theme for Hugo" />
+<meta name="twitter:description" content="Theano — популярная библиотека для работы с нейронными сетями. И как многие полезные Machine Learning инструменты, на Windows она просто так не ставится.
+" />
+<meta name="twitter:site" content="re9ulus.github.io" />
+<meta name="twitter:creator" content="re9ulus" />
+<meta name="twitter:image" content="">
+
+
+<meta property="og:locale" content="en" />
+<meta property="og:type" content="article" />
+<meta property="og:title" content="Ставим Theano на Windows :: Re9ulus Blog — A simple, retro theme for Hugo">
+<meta property="og:description" content="Theano — популярная библиотека для работы с нейронными сетями. И как многие полезные Machine Learning инструменты, на Windows она просто так не ставится.
+" />
+<meta property="og:url" content="re9ulus.github.io/post/2017-03-09-theano-win-install/" />
+<meta property="og:site_name" content="Ставим Theano на Windows" />
+<meta property="og:image" content="">
+<meta property="og:image:width" content="2048">
+<meta property="og:image:height" content="1024">
+
+<meta property="article:published_time" content="2017-03-09 00:00:00 &#43;0000 UTC" />
+
+
+
+
+
+
+
+
+
+
+
+</head>
+<body class="">
+
+
+<div class="container center">
+
+  <header class="header">
+  <div class="header__inner">
+    <div class="header__logo">
+      <a href="/">
+  <div class="logo">
+    Re9ulus
+  </div>
+</a>
+
+    </div>
+    <div class="menu-trigger">menu</div>
+  </div>
+  
+    <nav class="menu">
+  <ul class="menu__inner menu__inner--desktop">
+    
+      
+        
+          <li><a href="re9ulus.github.io/about">About</a></li>
+        
+      
+      
+    
+
+    
+  </ul>
+
+  <ul class="menu__inner menu__inner--mobile">
+    
+      
+        <li><a href="re9ulus.github.io/about">About</a></li>
+      
+    
+    
+  </ul>
+</nav>
+
+  
+</header>
+
+
+  <div class="content">
+    
+<div class="post">
+  <h1 class="post-title">
+    <a href="re9ulus.github.io/post/2017-03-09-theano-win-install/">Ставим Theano на Windows</a></h1>
+  <div class="post-meta">
+      
+    <span class="post-date">
+      2017-03-09
+    </span>
+    
+    
+    <span class="post-author">::
+      re9ulus
+    </span>
+    
+  </div>
+
+  
+
+  
+
+  <div class="post-content">
+    <p><em>Theano</em> — популярная <a href="http://deeplearning.net/software/theano/">библиотека</a> для работы с нейронными сетями. И как многие полезные Machine Learning инструменты, на Windows она просто так не ставится.</p>
+<p>В заметке описан самый простой из известных мне на данный момент способов установки <em>Theano</em> на Windows, благодаря которому у меня получилось поставить на <code>Python 3.5 x64</code> пакет <code>Theano 0.9.0.rc3</code> с работающей поддержкой GPU, система <code>win8.1 x64</code>.</p>
+<p>Еще можно воспользоваться <a href="http://deeplearning.net/software/theano/install.html">официальной документацией</a> или <a href="https://github.com/Theano/Theano/issues/5348">альтернативной инструкцией</a>.</p>
+<h2 id="-theano">Установка Theano</h2>
+<p>1. Нам понадобится <a href="https://conda.io/docs/intro.html">Conda</a>, которая идет в пакете <a href="https://www.continuum.io/downloads">Anaconda</a> для ML в Python. Я использую <code>Anaconda  3</code> и <code>Python 3.5</code>.</p>
+<p>2. В консоли ставим нужные пакеты.</p>
+<pre><code>conda install mingw libpython
+</code></pre><p>3. Клонируем репозиторий <em>Theano</em>. (Естественно понадобится <a href="https://git-scm.com">Git</a>)</p>
+<pre><code>git clone https://github.com/Theano/Theano.git
+</code></pre><p>4. Устанавливаем Python пакет.</p>
+<pre><code>cd Theano
+python setup.py install
+</code></pre><p>Готово.</p>
+<p><em>Theano</em> должен быть установлен. Для проверки корректности можно попробовать выполнить простой скрипт в интерпретаторе.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">&gt;&gt;</span><span style="color:#f92672">&gt;</span> <span style="color:#f92672">import</span> theano.tensor <span style="color:#f92672">as</span> T
+<span style="color:#f92672">&gt;&gt;</span><span style="color:#f92672">&gt;</span> <span style="color:#f92672">from</span> theano <span style="color:#f92672">import</span> function
+<span style="color:#f92672">&gt;&gt;</span><span style="color:#f92672">&gt;</span> x <span style="color:#f92672">=</span> T<span style="color:#f92672">.</span>dscalar(<span style="color:#e6db74"></span><span style="color:#e6db74">&#39;</span><span style="color:#e6db74">x</span><span style="color:#e6db74">&#39;</span>)
+<span style="color:#f92672">&gt;&gt;</span><span style="color:#f92672">&gt;</span> y <span style="color:#f92672">=</span> T<span style="color:#f92672">.</span>dscalar(<span style="color:#e6db74"></span><span style="color:#e6db74">&#39;</span><span style="color:#e6db74">y</span><span style="color:#e6db74">&#39;</span>)
+<span style="color:#f92672">&gt;&gt;</span><span style="color:#f92672">&gt;</span> z <span style="color:#f92672">=</span> x <span style="color:#f92672">+</span> y
+<span style="color:#f92672">&gt;&gt;</span><span style="color:#f92672">&gt;</span> f <span style="color:#f92672">=</span> function([x, y], z)
+<span style="color:#f92672">&gt;&gt;</span><span style="color:#f92672">&gt;</span> f(<span style="color:#ae81ff">2</span>, <span style="color:#ae81ff">3</span>)
+<span style="color:#75715e"># array(5.0)</span>
+</code></pre></div><p>Если выполнилось — <em>Theano</em> нормально установлен. Но работает он только на процессоре (CPU), значит сети будут считаться очень медленно. Настроим работу с видеокартой (GPU).</p>
+<h2 id="--theano--gpu">Настраиваем работу Theano с GPU</h2>
+<p>1. Нам понадобится Visual Studio. Я использовал <code>Enterprise edition 2013</code>.
+Можно попробовать использовать Community version студии и <a href="https://www.microsoft.com/en-us/download/details.aspx?id=8279">MS SDK for Win7</a>.
+VS 2015 использовать не стоит, она не поддерживает CUDA 7.5.</p>
+<p>2. Устанавливаем <a href="https://developer.nvidia.com/cuda-75-downloads-archive">CUDA 7.5 Toolkit</a>. Придется зарегистрироваться на сайте NVidia.</p>
+<p>3. Добавляем в домашнюю директорию пользователя (например <code>C:\Users\re9ulus</code>) файл <code>.theanorc.txt</code> с содержимым:</p>
+<pre><code>#!sh
+[global]
+device = gpu
+floatX = float32
+[nvcc]
+compiler_bindir=D:\soft\dev\vs2013\VC\bin
+</code></pre><p>где <code>compiler_bindir</code> — путь к папке <code>bin</code> в установленной <em>Visual Studio</em>.</p>
+<p>Готово. Теперь <em>Theano</em> должна использовать GPU. Проверить можно с помощью примера из <a href="http://deeplearning.net/software/theano/tutorial/using_gpu.html">официальной документации</a>:</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">from</span> theano <span style="color:#f92672">import</span> function, config, shared, sandbox
+<span style="color:#f92672">import</span> theano.sandbox.cuda.basic_ops
+<span style="color:#f92672">import</span> theano.tensor <span style="color:#f92672">as</span> T
+<span style="color:#f92672">import</span> numpy
+<span style="color:#f92672">import</span> time
+
+vlen <span style="color:#f92672">=</span> <span style="color:#ae81ff">10</span> <span style="color:#f92672">*</span> <span style="color:#ae81ff">30</span> <span style="color:#f92672">*</span> <span style="color:#ae81ff">768</span>  <span style="color:#75715e"># 10 x #cores x # threads per core</span>
+iters <span style="color:#f92672">=</span> <span style="color:#ae81ff">1000</span>
+
+rng <span style="color:#f92672">=</span> numpy<span style="color:#f92672">.</span>random<span style="color:#f92672">.</span>RandomState(<span style="color:#ae81ff">22</span>)
+x <span style="color:#f92672">=</span> shared(numpy<span style="color:#f92672">.</span>asarray(rng<span style="color:#f92672">.</span>rand(vlen), <span style="color:#e6db74"></span><span style="color:#e6db74">&#39;</span><span style="color:#e6db74">float32</span><span style="color:#e6db74">&#39;</span>))
+f <span style="color:#f92672">=</span> function([], sandbox<span style="color:#f92672">.</span>cuda<span style="color:#f92672">.</span>basic_ops<span style="color:#f92672">.</span>gpu_from_host(T<span style="color:#f92672">.</span>exp(x)))
+<span style="color:#66d9ef">print</span>(f<span style="color:#f92672">.</span>maker<span style="color:#f92672">.</span>fgraph<span style="color:#f92672">.</span>toposort())
+t0 <span style="color:#f92672">=</span> time<span style="color:#f92672">.</span>time()
+<span style="color:#66d9ef">for</span> i <span style="color:#f92672">in</span> range(iters):
+    r <span style="color:#f92672">=</span> f()
+t1 <span style="color:#f92672">=</span> time<span style="color:#f92672">.</span>time()
+<span style="color:#66d9ef">print</span>(<span style="color:#e6db74"></span><span style="color:#e6db74">&#34;</span><span style="color:#e6db74">Looping </span><span style="color:#e6db74">%d</span><span style="color:#e6db74"> times took </span><span style="color:#e6db74">%f</span><span style="color:#e6db74"> seconds</span><span style="color:#e6db74">&#34;</span> <span style="color:#f92672">%</span> (iters, t1 <span style="color:#f92672">-</span> t0))
+<span style="color:#66d9ef">print</span>(<span style="color:#e6db74"></span><span style="color:#e6db74">&#34;</span><span style="color:#e6db74">Result is </span><span style="color:#e6db74">%s</span><span style="color:#e6db74">&#34;</span> <span style="color:#f92672">%</span> (r,))
+<span style="color:#66d9ef">print</span>(<span style="color:#e6db74"></span><span style="color:#e6db74">&#34;</span><span style="color:#e6db74">Numpy result is </span><span style="color:#e6db74">%s</span><span style="color:#e6db74">&#34;</span> <span style="color:#f92672">%</span> (numpy<span style="color:#f92672">.</span>asarray(r),))
+<span style="color:#66d9ef">if</span> numpy<span style="color:#f92672">.</span>any([isinstance(x<span style="color:#f92672">.</span>op, T<span style="color:#f92672">.</span>Elemwise) <span style="color:#66d9ef">for</span> x <span style="color:#f92672">in</span> f<span style="color:#f92672">.</span>maker<span style="color:#f92672">.</span>fgraph<span style="color:#f92672">.</span>toposort()]):
+    <span style="color:#66d9ef">print</span>(<span style="color:#e6db74"></span><span style="color:#e6db74">&#39;</span><span style="color:#e6db74">Used the cpu</span><span style="color:#e6db74">&#39;</span>)
+<span style="color:#66d9ef">else</span>:
+    <span style="color:#66d9ef">print</span>(<span style="color:#e6db74"></span><span style="color:#e6db74">&#39;</span><span style="color:#e6db74">Used the gpu</span><span style="color:#e6db74">&#39;</span>)
+</code></pre></div>
+  </div>
+  
+  <div class="pagination">
+    <div class="pagination__title">
+      <span
+        class="pagination__title-h">Read other posts</span>
+      <hr />
+    </div>
+    <div class="pagination__buttons">
+      
+      
+      <span class="button next">
+        <a href="re9ulus.github.io/post/2017-03-04-imagenet-paper-digest/">
+          <span class="button__text">Заметки о статьях по DeepLearning и ImageNet</span>
+          <span class="button__icon">→</span>
+        </a>
+      </span>
+      
+    </div>
+  </div>
+  
+
+  
+
+</div>
+
+  </div>
+
+  
+    <footer class="footer">
+  <div class="footer__inner">
+    
+      <div class="copyright">
+        <span>© 2019 Powered by <a href="http://gohugo.io">Hugo</a></span>
+    
+        <span>:: Theme made by <a href="https://twitter.com/panr">panr</a></span>
+      </div>
+  </div>
+</footer>
+
+<script src="re9ulus.github.io/assets/main.js"></script>
+<script src="re9ulus.github.io/assets/prism.js"></script>
+
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.css" integrity="sha384-zB1R0rpPzHqg7Kpt0Aljp8JPLqbXI3bhnPWROx27a9N0Ll6ZP/+DiW/UqRcLbRjq" crossorigin="anonymous">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.js" integrity="sha384-y23I5Q6l+B6vatafAwxRu/0oK/79VlbSz7Q9aiSZUvyWYIYsd+qj+o24G5ZU2zJz" crossorigin="anonymous"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/contrib/auto-render.min.js" integrity="sha384-kWPLUVMOks5AQFrykwIup5lo0m3iMkkHrD0uJ4H5cjeGihAutqP0yW0J6dpFiVkI" crossorigin="anonymous"></script>
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        renderMathInElement(document.body, {
+			delimiters: [
+  				{left: "$$", right: "$$", display: true},
+  				{left: "\\(", right: "\\)", display: false},
+  				{left: "\\[", right: "\\]", display: true},
+  				{left: "$", right: "$", display: false},
+			]
+        });
+    });
+</script>
+
+
+
+<script type="text/javascript" >
+   (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+   m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
+   (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+
+   ym(29515615, "init", {
+        clickmap:true,
+        trackLinks:true,
+        accurateTrackBounce:true
+   });
+</script>
+<noscript><div><img src="https://mc.yandex.ru/watch/29515615" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+
+
+
+  
+</div>
+
+</body>
+</html>

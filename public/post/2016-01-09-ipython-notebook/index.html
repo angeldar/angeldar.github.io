@@ -1,0 +1,346 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  
+    <title>IPython Notebook :: Re9ulus Blog — A simple, retro theme for Hugo</title>
+  
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+<meta name="description" content="Как установить и что с ним потом делать
+"/>
+<meta name="keywords" content=""/>
+<meta name="robots" content="noodp"/>
+<link rel="canonical" href="re9ulus.github.io/post/2016-01-09-ipython-notebook/" />
+
+
+<link rel="stylesheet" href="re9ulus.github.io/assets/style.css">
+
+  <link rel="stylesheet" href="re9ulus.github.io/assets/green.css">
+
+
+
+
+
+
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="re9ulus.github.io/img/apple-touch-icon-144-precomposed.png">
+
+<link rel="shortcut icon" href="re9ulus.github.io/img/favicon/green.png">
+
+
+
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="IPython Notebook :: Re9ulus Blog — A simple, retro theme for Hugo" />
+<meta name="twitter:description" content="Как установить и что с ним потом делать
+" />
+<meta name="twitter:site" content="re9ulus.github.io" />
+<meta name="twitter:creator" content="re9ulus" />
+<meta name="twitter:image" content="">
+
+
+<meta property="og:locale" content="en" />
+<meta property="og:type" content="article" />
+<meta property="og:title" content="IPython Notebook :: Re9ulus Blog — A simple, retro theme for Hugo">
+<meta property="og:description" content="Как установить и что с ним потом делать
+" />
+<meta property="og:url" content="re9ulus.github.io/post/2016-01-09-ipython-notebook/" />
+<meta property="og:site_name" content="IPython Notebook" />
+<meta property="og:image" content="">
+<meta property="og:image:width" content="2048">
+<meta property="og:image:height" content="1024">
+
+<meta property="article:published_time" content="2016-01-09 16:00:00 &#43;0000 UTC" />
+
+
+
+
+
+
+
+
+
+
+
+</head>
+<body class="">
+
+
+<div class="container center">
+
+  <header class="header">
+  <div class="header__inner">
+    <div class="header__logo">
+      <a href="/">
+  <div class="logo">
+    Re9ulus
+  </div>
+</a>
+
+    </div>
+    <div class="menu-trigger">menu</div>
+  </div>
+  
+    <nav class="menu">
+  <ul class="menu__inner menu__inner--desktop">
+    
+      
+        
+          <li><a href="re9ulus.github.io/about">About</a></li>
+        
+      
+      
+    
+
+    
+  </ul>
+
+  <ul class="menu__inner menu__inner--mobile">
+    
+      
+        <li><a href="re9ulus.github.io/about">About</a></li>
+      
+    
+    
+  </ul>
+</nav>
+
+  
+</header>
+
+
+  <div class="content">
+    
+<div class="post">
+  <h1 class="post-title">
+    <a href="re9ulus.github.io/post/2016-01-09-ipython-notebook/">IPython Notebook</a></h1>
+  <div class="post-meta">
+      
+    <span class="post-date">
+      2016-01-09
+    </span>
+    
+    
+    <span class="post-author">::
+      re9ulus
+    </span>
+    
+  </div>
+
+  
+
+  
+
+  <div class="post-content">
+    <p>Как установить и что с ним потом делать</p>
+<p>IPython Notebook - это интерактивная среда для программирования на языке python, которая позволяет объединить код, текст (включая <a href="https://daringfireball.net/projects/markdown/" title="Markdown">Markdown</a>), графики, математические формулы (<a href="https://www.mathjax.org/" title="Mathjax">MathJax</a>) и скомбинировать все в одном отчете. Отчет можно конвертировать в html, LaTeX, pdf и другие форматы.</p>
+<p>Удобный инструмент для ведения исследований, заметок, конспектов и тому подобного.
+Существуют <a href="http://nb.bianp.net/sort/views/" title="Links to the best IPython and Jupyter Notebooks.">статьи и учебные материалы</a> распространяемые в качестве ноутбуков.</p>
+<h1 id="heading">Установка</h1>
+<h2 id="1-">1 способ</h2>
+<p>Самым простым способом установки является использование python дистрибутива <a href="https://www.continuum.io/downloads" title="Anaconda">Anaconda</a>, содержащего более 300 научных python пакетов, включая Ipython.</p>
+<h2 id="2-">2 способ</h2>
+<p>Для установки на *nix системах</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">pip install ipython<span style="color:#f92672">[</span>all<span style="color:#f92672">]</span></code></pre></div>
+<p>Для установки на windows необходимо последовательно установить:</p>
+<ol>
+<li><a href="https://pypi.python.org/pypi/setuptools" title="setuptools">setuptools</a></li>
+<li><a href="https://pypi.python.org/pypi/pyreadline" title="pyreadline">pyreadline</a></li>
+<li><a href="https://pypi.python.org/pypi/ipython" title="ipython">IPython</a></li>
+</ol>
+<h1 id="heading-1">Запуск</h1>
+<p>Для запуска ноутбука необходимо в терминале выбрать директорию, где будут храниться заметки и воспользоваться командой</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">ipython notebook</code></pre></div>
+<p>На 8888 порту будет запущен локальный сервер и в браузере откроется страница с ноутбуком.</p>
+
+  <img src="/img/ipython_notebook/notebook_1_start.png"  alt="jupyter notebook"  class="center"  />
+
+
+<h1 id="heading-2">Использование</h1>
+<p>Новый документ можно создать с помощью выпадающего меню.</p>
+
+  <img src="/img/ipython_notebook/notebook_2_new_document.png"  alt="New document"  class="center"  />
+
+
+<p>После чего будет создан новый, пустой документ. Переименовать документ можно нажав на строку <em>Untitled</em>, либо через меню <em>File-&gt;Rename</em>.</p>
+
+  <img src="/img/ipython_notebook/notebook_3_new_document_view.png"  alt="New document view"  class="center"  />
+
+
+<p>Документ сохраняется автоматически и правильно понимает сочетание <em>Ctrl-S</em>.</p>
+<p>Код в Ipython документах организован в ячейки (<code>cells</code>). По нажатии <em>Ctrl-Enter</em> код в ячейке выполняется и результат вычислений отображается под ней.</p>
+
+  <img src="/img/ipython_notebook/notebook_4_cell_example.png"  alt="Cell example"  class="center"  />
+
+
+<p>Ячейка может относиться к одному из нескольких типов. Выбрать тип ячейки можно используя пункт меню <em>Cell-&gt;Cell Type</em>.</p>
+<h2 id="code-cell">Code cell</h2>
+<p>Позволяет писать и редактировать код с подсветкой синтаксиса и автоподстановкой (<em>Tab</em>). После добавления директивы</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">%</span>matplotlib inline</code></pre></div>
+<p>в начале ячейки, появляется возможность строить графики прямо в документе.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#f92672">%</span>matplotlib inline
+<span style="color:#f92672">import</span> matplotlib.pyplot <span style="color:#f92672">as</span> plt
+<span style="color:#f92672">import</span> matplotlib.image <span style="color:#f92672">as</span> mpimg
+<span style="color:#f92672">import</span> numpy <span style="color:#f92672">as</span> np
+
+img<span style="color:#f92672">=</span>mpimg<span style="color:#f92672">.</span>imread(<span style="color:#e6db74"></span><span style="color:#e6db74">&#39;</span><span style="color:#e6db74">city.jpg</span><span style="color:#e6db74">&#39;</span>)
+<span style="color:#66d9ef">print</span> <span style="color:#e6db74"></span><span style="color:#e6db74">&#34;</span><span style="color:#e6db74">Image size: {0}</span><span style="color:#e6db74">&#34;</span><span style="color:#f92672">.</span>format(img<span style="color:#f92672">.</span>shape)
+
+<span style="color:#75715e"># Select green channel</span>
+img_green <span style="color:#f92672">=</span> img[:,:,<span style="color:#ae81ff">1</span>]
+plt<span style="color:#f92672">.</span>imshow(img_green, cmap<span style="color:#f92672">=</span><span style="color:#e6db74"></span><span style="color:#e6db74">&#34;</span><span style="color:#e6db74">Greys_r</span><span style="color:#e6db74">&#34;</span>)
+plt<span style="color:#f92672">.</span>show()
+
+<span style="color:#75715e"># Plot green channel row intensity</span>
+plt<span style="color:#f92672">.</span>plot(img_green[<span style="color:#ae81ff">150</span>, :])
+plt<span style="color:#f92672">.</span>show()</code></pre></div>
+
+  <img src="/img/ipython_notebook/notebook_5_code_cell.png"  alt="Code cell"  class="center"  />
+
+
+<h2 id="markdown-cell">Markdown cell</h2>
+<p>Ячейки для документирования, позволяют использовать <a href="https://daringfireball.net/projects/markdown/" title="Markdown">Markdown</a> синтаксис и математические формулы <a href="https://www.mathjax.org/" title="Mathjax">MathJax</a>.</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-python" data-lang="python"><span style="color:#75715e">### H3 title for the text ###</span>
+
+TODO List:
+
+ <span style="color:#ae81ff">1.</span> Create note about IPython notebook<span style="color:#f92672">.</span>
+ <span style="color:#ae81ff">2.</span> Add part about Markdown<span style="color:#f92672">.</span>
+ <span style="color:#ae81ff">3.</span> Do <span style="color:#f92672">not</span> forget about MathJax<span style="color:#f92672">.</span>
+ <span style="color:#ae81ff">4.</span> Add table <span style="color:#f92672">in</span> the end<span style="color:#f92672">.</span>
+ 
+<span style="color:#f92672">&lt;</span>h4<span style="color:#f92672">&gt;</span>An Identity of Ramanujan<span style="color:#f92672">&lt;</span><span style="color:#f92672">/</span>h4<span style="color:#f92672">&gt;</span>
+
+<span style="color:#960050;background-color:#1e0010">$</span><span style="color:#960050;background-color:#1e0010">$</span> \frac{<span style="color:#ae81ff">1</span>}{\Bigl(\sqrt{\phi \sqrt{<span style="color:#ae81ff">5</span>}}<span style="color:#f92672">-</span>\phi\Bigr) e<span style="color:#f92672">^</span>{\frac25 \pi}} <span style="color:#f92672">=</span>
+<span style="color:#ae81ff">1</span><span style="color:#f92672">+</span>\frac{e<span style="color:#f92672">^</span>{<span style="color:#f92672">-</span><span style="color:#ae81ff">2</span>\pi}} {<span style="color:#ae81ff">1</span><span style="color:#f92672">+</span>\frac{e<span style="color:#f92672">^</span>{<span style="color:#f92672">-</span><span style="color:#ae81ff">4</span>\pi}} {<span style="color:#ae81ff">1</span><span style="color:#f92672">+</span>\frac{e<span style="color:#f92672">^</span>{<span style="color:#f92672">-</span><span style="color:#ae81ff">6</span>\pi}}
+{<span style="color:#ae81ff">1</span><span style="color:#f92672">+</span>\frac{e<span style="color:#f92672">^</span>{<span style="color:#f92672">-</span><span style="color:#ae81ff">8</span>\pi}} {<span style="color:#ae81ff">1</span><span style="color:#f92672">+</span>\ldots} } } } <span style="color:#960050;background-color:#1e0010">$</span><span style="color:#960050;background-color:#1e0010">$</span>
+
+<span style="color:#75715e">#### Simple table</span>
+
+<span style="color:#f92672">|</span> Tables <span style="color:#f92672">|</span> True  <span style="color:#f92672">|</span> False <span style="color:#f92672">|</span>
+<span style="color:#f92672">|</span> <span style="color:#f92672">-</span><span style="color:#f92672">-</span><span style="color:#f92672">-</span><span style="color:#f92672">-</span><span style="color:#f92672">-</span><span style="color:#f92672">-</span> <span style="color:#f92672">|</span>:<span style="color:#f92672">-</span><span style="color:#f92672">-</span><span style="color:#f92672">-</span><span style="color:#f92672">-</span><span style="color:#f92672">-</span>:<span style="color:#f92672">|</span> <span style="color:#f92672">-</span><span style="color:#f92672">-</span><span style="color:#f92672">-</span><span style="color:#f92672">-</span><span style="color:#f92672">-</span>:<span style="color:#f92672">|</span>
+<span style="color:#f92672">|</span> True   <span style="color:#f92672">|</span> <span style="color:#ae81ff">78</span>    <span style="color:#f92672">|</span> <span style="color:#ae81ff">14</span>    <span style="color:#f92672">|</span>
+<span style="color:#f92672">|</span> False  <span style="color:#f92672">|</span> <span style="color:#ae81ff">3</span>     <span style="color:#f92672">|</span> <span style="color:#ae81ff">45</span>    <span style="color:#f92672">|</span></code></pre></div>
+
+  <img src="/img/ipython_notebook/notebook_6_markdown_cell.png"  alt="Markdown cell"  class="center"  />
+
+
+<h2 id="raw-cell">Raw cell</h2>
+<p>Эти ячейки служат для хранения дополнительной информации, никак не исполняются и не модифицируются. Например в них можно хранить LaTeX для статьи.</p>
+<h1 id="-notebook-a---">Конвертация notebook-a в другие форматы</h1>
+<p><a href="https://ipython.org/ipython-doc/1/interactive/nbconvert.html" title="Conver notebook">Конвертировать ноутбук</a> можно командой</p>
+<div class="highlight"><pre style="color:#f8f8f2;background-color:#272822;-moz-tab-size:4;-o-tab-size:4;tab-size:4"><code class="language-bash" data-lang="bash">ipython nbconvert --to FORMAT notebook.ipynb</code></pre></div>
+<p>Допустимые форматы:</p>
+<ul>
+<li><code>--to html</code> - статическая html страница</li>
+<li><code>--to latex</code> - LaTeX</li>
+<li><code>--to slides</code> - <a href="http://lab.hakim.se/reveal-js/#/" title="Reveal.js">Reveal.js</a> html слайдшоу</li>
+<li><code>--to markdown</code> - Markdown, код будет экранирован</li>
+<li><code>--to rst</code> - формат для <a href="http://www.sphinx-doc.org/en/stable/">Sphinx docs</a></li>
+<li><code>--to python</code> - python скрипт.</li>
+</ul>
+<h1 id="-">Комбинации клавиш</h1>
+<ul>
+<li><code>Esc</code> - командный режим (создание, удаление, перемещение ячеек)</li>
+<li><code>Enter</code> - режим редактирования (изменение содержимого ячейки)</li>
+<li><code>Ctrl-Enter</code> - выполнить код в ячейке</li>
+<li><code>Shift-Enter</code> - выполнить код в ячейке и перейти к следующей</li>
+<li><code>Alt-Enter</code> - выполнить код в ячейке и вставить ячейку снизу</li>
+<li><code>Ctrl-M</code> - прервать исполнение</li>
+<li><code>A</code> - вставить ячейку выше</li>
+<li><code>B</code> - вставить ячейку ниже</li>
+<li><code>K</code> - выбрать предыдущую ячейку</li>
+<li><code>J</code> - выбрать следующую ячейку</li>
+<li><code>D,D</code> - удалить ячейку</li>
+<li><code>Y</code> - в code cell</li>
+<li><code>M</code> - в markdown cell</li>
+<li><code>R</code> - в raw cell</li>
+</ul>
+  </div>
+  
+  <div class="pagination">
+    <div class="pagination__title">
+      <span
+        class="pagination__title-h">Read other posts</span>
+      <hr />
+    </div>
+    <div class="pagination__buttons">
+      
+      <span class="button previous">
+        <a href="re9ulus.github.io/post/2016-03-20-xgboost_win_install/">
+          <span class="button__icon">←</span>
+          <span class="button__text">Установка XGBoost на Windows</span>
+        </a>
+      </span>
+      
+      
+      <span class="button next">
+        <a href="re9ulus.github.io/post/2015-12-07-trees_in_r/">
+          <span class="button__text">Деревья принятия решений в R</span>
+          <span class="button__icon">→</span>
+        </a>
+      </span>
+      
+    </div>
+  </div>
+  
+
+  
+
+</div>
+
+  </div>
+
+  
+    <footer class="footer">
+  <div class="footer__inner">
+    
+      <div class="copyright">
+        <span>© 2019 Powered by <a href="http://gohugo.io">Hugo</a></span>
+    
+        <span>:: Theme made by <a href="https://twitter.com/panr">panr</a></span>
+      </div>
+  </div>
+</footer>
+
+<script src="re9ulus.github.io/assets/main.js"></script>
+<script src="re9ulus.github.io/assets/prism.js"></script>
+
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.css" integrity="sha384-zB1R0rpPzHqg7Kpt0Aljp8JPLqbXI3bhnPWROx27a9N0Ll6ZP/+DiW/UqRcLbRjq" crossorigin="anonymous">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.js" integrity="sha384-y23I5Q6l+B6vatafAwxRu/0oK/79VlbSz7Q9aiSZUvyWYIYsd+qj+o24G5ZU2zJz" crossorigin="anonymous"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/contrib/auto-render.min.js" integrity="sha384-kWPLUVMOks5AQFrykwIup5lo0m3iMkkHrD0uJ4H5cjeGihAutqP0yW0J6dpFiVkI" crossorigin="anonymous"></script>
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        renderMathInElement(document.body, {
+			delimiters: [
+  				{left: "$$", right: "$$", display: true},
+  				{left: "\\(", right: "\\)", display: false},
+  				{left: "\\[", right: "\\]", display: true},
+  				{left: "$", right: "$", display: false},
+			]
+        });
+    });
+</script>
+
+
+
+<script type="text/javascript" >
+   (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+   m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
+   (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+
+   ym(29515615, "init", {
+        clickmap:true,
+        trackLinks:true,
+        accurateTrackBounce:true
+   });
+</script>
+<noscript><div><img src="https://mc.yandex.ru/watch/29515615" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+
+
+
+  
+</div>
+
+</body>
+</html>

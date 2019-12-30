@@ -1,0 +1,267 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  
+    <title>Установка XGBoost на Windows :: Re9ulus Blog — A simple, retro theme for Hugo</title>
+  
+  <meta http-equiv="content-type" content="text/html; charset=utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1">
+<meta name="description" content=""/>
+<meta name="keywords" content=""/>
+<meta name="robots" content="noodp"/>
+<link rel="canonical" href="re9ulus.github.io/post/2016-03-20-xgboost_win_install/" />
+
+
+<link rel="stylesheet" href="re9ulus.github.io/assets/style.css">
+
+  <link rel="stylesheet" href="re9ulus.github.io/assets/green.css">
+
+
+
+
+
+
+<link rel="apple-touch-icon-precomposed" sizes="144x144" href="re9ulus.github.io/img/apple-touch-icon-144-precomposed.png">
+
+<link rel="shortcut icon" href="re9ulus.github.io/img/favicon/green.png">
+
+
+
+<meta name="twitter:card" content="summary" />
+<meta name="twitter:title" content="Установка XGBoost на Windows :: Re9ulus Blog — A simple, retro theme for Hugo" />
+<meta name="twitter:description" content="" />
+<meta name="twitter:site" content="re9ulus.github.io" />
+<meta name="twitter:creator" content="re9ulus" />
+<meta name="twitter:image" content="">
+
+
+<meta property="og:locale" content="en" />
+<meta property="og:type" content="article" />
+<meta property="og:title" content="Установка XGBoost на Windows :: Re9ulus Blog — A simple, retro theme for Hugo">
+<meta property="og:description" content="" />
+<meta property="og:url" content="re9ulus.github.io/post/2016-03-20-xgboost_win_install/" />
+<meta property="og:site_name" content="Установка XGBoost на Windows" />
+<meta property="og:image" content="">
+<meta property="og:image:width" content="2048">
+<meta property="og:image:height" content="1024">
+
+<meta property="article:published_time" content="2016-03-20 00:00:00 &#43;0000 UTC" />
+
+
+
+
+
+
+
+
+
+
+
+</head>
+<body class="">
+
+
+<div class="container center">
+
+  <header class="header">
+  <div class="header__inner">
+    <div class="header__logo">
+      <a href="/">
+  <div class="logo">
+    Re9ulus
+  </div>
+</a>
+
+    </div>
+    <div class="menu-trigger">menu</div>
+  </div>
+  
+    <nav class="menu">
+  <ul class="menu__inner menu__inner--desktop">
+    
+      
+        
+          <li><a href="re9ulus.github.io/about">About</a></li>
+        
+      
+      
+    
+
+    
+  </ul>
+
+  <ul class="menu__inner menu__inner--mobile">
+    
+      
+        <li><a href="re9ulus.github.io/about">About</a></li>
+      
+    
+    
+  </ul>
+</nav>
+
+  
+</header>
+
+
+  <div class="content">
+    
+<div class="post">
+  <h1 class="post-title">
+    <a href="re9ulus.github.io/post/2016-03-20-xgboost_win_install/">Установка XGBoost на Windows</a></h1>
+  <div class="post-meta">
+      
+    <span class="post-date">
+      2016-03-20
+    </span>
+    
+    
+    <span class="post-author">::
+      re9ulus
+    </span>
+    
+  </div>
+
+  
+
+  
+
+  <div class="post-content">
+    <p><em><code>XGBoost</code></em> - это <em>очень</em> эффективная библиотека, которая реализует алгоритмы адаптивного бустинга. Если вам понадобилось ее установить, то я предполагаю что вы знаете что это и зачем нужно.</p>
+<hr>
+<p><strong>Update:</strong> <em>02.03.2017</em></p>
+<p>Вместо самостоятельной сборки можно воспользоваться неофициальными бинарниками.</p>
+<ul>
+<li>плюс: они собраны за вас и вам не придется самостоятельно проходить процесс сборки.</li>
+<li>минус: бинарники неофициальные, со всеми вытекающими последствиями.</li>
+</ul>
+<h2 id="--httpwwwpicnetcomaublogsguidopost20160922xgboost-windows-x64-binaries-for-download------7">Скачать можно <a href="http://www.picnet.com.au/blogs/guido/post/2016/09/22/xgboost-windows-x64-binaries-for-download/">здесь</a> и сразу переходить к пункту 7.</h2>
+<p>Но, перед началом использования, пользователей Windows ожидает нетривиальный квест с установкой данной библиотеки. Об этом и пойдет речь в данной заметке.</p>
+<p>Нижеописанное представляет собой микс из <a href="https://xgboost.readthedocs.org/en/latest/build.html#building-on-windows/" title="XGBoost official documentation installation.">официальной документации</a> и различных ответов на Stack Oveflow и Kaggle, с помощью которого мне удалось установить <code>x64</code> пакет <code>Python</code> на <code>Windows 8.1</code>.</p>
+<p>Если у вас есть возможность использовать XGBoost под <code>*nix</code> системой - так и сделайте. Весь процесс установки для *unix: <code>pip install xgboost</code>.</p>
+<h2 id="---windows">Пошаговая инструкция для Windows</h2>
+<p>1. Устанавливаем <a href="https://sourceforge.net/projects/mingw-w64/" title="mingw64 installation link.">mingw64</a>.</p>
+<p>Путь установки не должен содержать кириллицы и желательно избежать пробелов. При установке выбираем:</p>
+<pre><code>Architecture: x86_64
+Threads: win32
+</code></pre><p>2. Добавляем папку <code>...\mingw64\bin</code> в переменные среды.</p>
+<p>3. Находим в папке <code>...\mingw64\bin</code> файл <code>mingw32-make.exe</code>, копируем и переименовываем в <code>make.exe</code>.</p>
+<p>4. Устанавливаем
+<a href="https://cygwin.com/install.html" title="Cygwin-x86_64 installation link.">Cygwin-x86_64</a>.</p>
+<p>5. Если по какой-то причине не установлен <a href="https://git-for-windows.github.io" title="git for windows installation link.">Git</a>, устанавливаем и добавляем в переменные среды.</p>
+<p>6. Переходим непосредственно к процессу установки. Вместо обычного терминала открываем <code>Cygwin64</code> и выполняем:</p>
+<pre><code>cd c:\
+&gt;
+git clone --recursive https://github.com/dmlc/xgboost
+cd xgboost
+git submodule init
+git submodule update
+cp make/mingw64.mk ./config.mk
+</code></pre><p>Если необходимо внести какие-то изменения в конфигурацию, это можно сделать в файле <code>config.mk</code>.
+Остается одна команда:</p>
+<pre><code>make -j4
+</code></pre><p>Возможно, у вас она выполнится нормально и в папке <code>C:\xgboost</code> появится файл <code>xgboost.exe</code>. Значит билд выполнен успешно.</p>
+<p>У меня билд падал с ошибкой <code>g++: error: unrecognized option '-pthread'</code>.</p>
+<p>Лечится эта ошибка изменением аргумента <code>-pthread</code> на <code>-lpthread</code> в <code>42</code> строке файла <code>C:\xgboost\Makefile</code>.
+После этого наконец должен появиться файл <code>xgboost.exe</code>, это значит что мы все сделали правильно.</p>
+<p>7. Осталось сделать из всего этого <code>python</code> пакет.</p>
+<pre><code>cd python-package
+python setup.py install
+</code></pre><p>Для выполнения этой команды могут понадобиться <code>distutils</code>, которые входят в <a href="https://pypi.python.org/pypi/setuptools" title="setuptools for windows installation link.">setuptools</a>.</p>
+<p>8. Тестируем</p>
+<pre><code>python
+&gt;&gt;&gt; import xgboost
+&gt;&gt;&gt; xgboost.__version__
+'0.4'
+</code></pre><p><em><code>XGBoost</code></em> установлен. Радуемся и начинаем обучать адаптивные леса.</p>
+<p>Дополнительно проверить надежность установки можно на официальных <a href="https://github.com/dmlc/xgboost/tree/master/demo/guide-python" title="official XGBoost examples.">примерах</a>.</p>
+  </div>
+  
+  <div class="pagination">
+    <div class="pagination__title">
+      <span
+        class="pagination__title-h">Read other posts</span>
+      <hr />
+    </div>
+    <div class="pagination__buttons">
+      
+      <span class="button previous">
+        <a href="re9ulus.github.io/post/2016-09-29-ml_is_fun_translate/">
+          <span class="button__icon">←</span>
+          <span class="button__text">Машинное обучение это весело!</span>
+        </a>
+      </span>
+      
+      
+      <span class="button next">
+        <a href="re9ulus.github.io/post/2016-01-09-ipython-notebook/">
+          <span class="button__text">IPython Notebook</span>
+          <span class="button__icon">→</span>
+        </a>
+      </span>
+      
+    </div>
+  </div>
+  
+
+  
+
+</div>
+
+  </div>
+
+  
+    <footer class="footer">
+  <div class="footer__inner">
+    
+      <div class="copyright">
+        <span>© 2019 Powered by <a href="http://gohugo.io">Hugo</a></span>
+    
+        <span>:: Theme made by <a href="https://twitter.com/panr">panr</a></span>
+      </div>
+  </div>
+</footer>
+
+<script src="re9ulus.github.io/assets/main.js"></script>
+<script src="re9ulus.github.io/assets/prism.js"></script>
+
+
+
+<link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.css" integrity="sha384-zB1R0rpPzHqg7Kpt0Aljp8JPLqbXI3bhnPWROx27a9N0Ll6ZP/+DiW/UqRcLbRjq" crossorigin="anonymous">
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/katex.min.js" integrity="sha384-y23I5Q6l+B6vatafAwxRu/0oK/79VlbSz7Q9aiSZUvyWYIYsd+qj+o24G5ZU2zJz" crossorigin="anonymous"></script>
+<script defer src="https://cdn.jsdelivr.net/npm/katex@0.11.1/dist/contrib/auto-render.min.js" integrity="sha384-kWPLUVMOks5AQFrykwIup5lo0m3iMkkHrD0uJ4H5cjeGihAutqP0yW0J6dpFiVkI" crossorigin="anonymous"></script>
+<script>
+    document.addEventListener("DOMContentLoaded", function() {
+        renderMathInElement(document.body, {
+			delimiters: [
+  				{left: "$$", right: "$$", display: true},
+  				{left: "\\(", right: "\\)", display: false},
+  				{left: "\\[", right: "\\]", display: true},
+  				{left: "$", right: "$", display: false},
+			]
+        });
+    });
+</script>
+
+
+
+<script type="text/javascript" >
+   (function(m,e,t,r,i,k,a){m[i]=m[i]||function(){(m[i].a=m[i].a||[]).push(arguments)};
+   m[i].l=1*new Date();k=e.createElement(t),a=e.getElementsByTagName(t)[0],k.async=1,k.src=r,a.parentNode.insertBefore(k,a)})
+   (window, document, "script", "https://mc.yandex.ru/metrika/tag.js", "ym");
+
+   ym(29515615, "init", {
+        clickmap:true,
+        trackLinks:true,
+        accurateTrackBounce:true
+   });
+</script>
+<noscript><div><img src="https://mc.yandex.ru/watch/29515615" style="position:absolute; left:-9999px;" alt="" /></div></noscript>
+
+
+
+  
+</div>
+
+</body>
+</html>
