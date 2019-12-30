@@ -1,4 +1,4 @@
-baseurl = "/"
+baseurl = "re9ulus.github.io"
 languageCode = "en-us"
 theme = "terminal"
 paginate = 10
